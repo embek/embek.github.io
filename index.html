@@ -34,6 +34,15 @@
                         <li>Real-time search and filtering capabilities</li>
                     </ul>
                     <a href="https://github.com/embek/phonebook-client" target="_blank" class="project-link">View on GitHub</a>
+                    <div class="screenshots-container">
+                        <button class="screenshot-btn" onclick="openGallery([
+                            'screenshots/phonebook-client/Screenshot1.png',
+                            'screenshots/phonebook-client/Screenshot2.png',
+                            'screenshots/phonebook-client/Screenshot3.png',
+                            'screenshots/phonebook-client/Screenshot4.png',
+                            'screenshots/phonebook-client/Screenshot5.png',
+                        ])">View Screenshots</button>
+                    </div>
                 </div>
                 <div class="project-card">
                     <h3>Point of Sale System</h3>
@@ -44,6 +53,11 @@
                         <li>Advanced analytics and reporting dashboard</li>
                     </ul>
                     <a href="https://github.com/embek/point-of-sale" target="_blank" class="project-link">View on GitHub</a>
+                    <!-- <div class="screenshots-container">
+                        <button class="screenshot-btn" onclick="openGallery([
+                            
+                        ])">View Screenshots</button>
+                    </div> -->
                 </div>
                 <div class="project-card">
                     <h3>Todo App (BREAD System)</h3>
@@ -54,6 +68,28 @@
                         <li>Responsive Bootstrap UI with EJS templates</li>
                     </ul>
                     <a href="https://github.com/embek/mongodb-breads" target="_blank" class="project-link">View on GitHub</a>
+                    <div class="screenshots-container">
+                        <button class="screenshot-btn" onclick="openGallery([
+                            'screenshots/mongodb-breads/Screenshot1.png',
+                            'screenshots/mongodb-breads/Screenshot2.png',
+                            'screenshots/mongodb-breads/Screenshot3.png',
+                            'screenshots/mongodb-breads/Screenshot4.png',
+                            'screenshots/mongodb-breads/Screenshot5.png',
+                            'screenshots/mongodb-breads/Screenshot6.png',
+                            'screenshots/mongodb-breads/Screenshot7.png',
+                            'screenshots/mongodb-breads/Screenshot8.png',
+                            'screenshots/mongodb-breads/Screenshot9.png',
+                            'screenshots/mongodb-breads/Screenshot10.png',
+                            'screenshots/mongodb-breads/Screenshot11.png',
+                            'screenshots/mongodb-breads/Screenshot12.png',
+                            'screenshots/mongodb-breads/Screenshot13.png',
+                            'screenshots/mongodb-breads/Screenshot14.png',
+                            'screenshots/mongodb-breads/Screenshot15.png',
+                            'screenshots/mongodb-breads/Screenshot16.png',
+                            'screenshots/mongodb-breads/Screenshot17.png',
+                            'screenshots/mongodb-breads/Screenshot18.png',
+                        ])">View Screenshots</button>
+                    </div>
                 </div>
                 <div class="project-card">
                     <h3>Phonebook Server</h3>
@@ -64,6 +100,12 @@
                         <li>PostgreSQL integration with Sequelize ORM</li>
                     </ul>
                     <a href="https://github.com/embek/phonebook-server" target="_blank" class="project-link">View on GitHub</a>
+                    <!-- <div class="screenshots-container">
+                        <button class="screenshot-btn" onclick="openGallery([
+                            '/screenshots/server/screenshot1.jpg',
+                            '/screenshots/server/screenshot2.jpg'
+                        ])">View Screenshots</button>
+                    </div> -->
                 </div>
             </div>
         </section>
@@ -74,10 +116,22 @@
                 <a href="https://github.com/embek">GitHub</a>
                 <a href="https://www.linkedin.com/in/adzkamm">LinkedIn</a>
                 <a href="mailto:adzka2008@gmail.com">Email</a>
-                <p>📞 +62 896 9764 0160</p>
-                <p>📍 Jember, Indonesia</p>
+                <span>📞 +62 896 9764 0160</span>
+                <span>📍 Jember, Indonesia</span>
             </div>
         </section>
     </main>
+
+    <div id="imageModal" class="modal">
+        <img id="modalImage" src="" alt="Full size image">
+        <span class="close-modal" onclick="closeModal()">&times;</span>
+        <div class="modal-nav">
+            <button onclick="previousImage()">Previous</button>
+            <span id="imageCount">1/2</span>
+            <button onclick="nextImage()">Next</button>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
