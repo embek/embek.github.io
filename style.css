@@ -38,13 +38,16 @@ section {
 }
 
 .project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
     gap: 2rem;
     margin-top: 2rem;
 }
 
 .project-card {
+    flex: 1 1 400px; /* base width of 400px, can grow and shrink */
+    max-width: calc(50% - 1rem); /* ensures 2 cards per row on wider screens */
+    min-width: 300px; /* minimum width before wrapping */
     border: 1px solid #ddd;
     padding: 1.5rem;
     border-radius: 8px;
@@ -92,4 +95,10 @@ section {
 .contact-links a {
     color: #2c3e50;
     text-decoration: none;
+}
+
+@media (max-width: 900px) {
+    .project-card {
+        max-width: 100%; /* full width on mobile */
+    }
 }
