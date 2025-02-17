@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', system-ui, sans-serif;
     line-height: 1.6;
     color: #333;
     background-color: #f5f5f5;
@@ -13,7 +13,7 @@ body {
 }
 
 header {
-    background: #2c3e50;
+    background: #1a1a1a;
     color: white;
     padding: 2rem;
     text-align: center;
@@ -47,26 +47,16 @@ h1 {
 
 /* Project Styles */
 .project-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
 }
 
 .project-card {
-    flex: 1 1 350px;
-    min-width: 300px;
-    max-width: calc(50% - 1rem);
-    background: white;
-    padding: 20px;
+    background: #f5f5f5;
+    padding: 1.5rem;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .project-card ul {
@@ -79,19 +69,16 @@ h1 {
     color: #555;
 }
 
-.project-link {
+.project-link, .screenshot-btn {
     display: inline-block;
-    margin-top: 15px;
-    padding: 8px 16px;
+    padding: 0.5rem 1rem;
     background: #007bff;
     color: white;
     text-decoration: none;
     border-radius: 4px;
-    transition: background 0.3s ease;
-}
-
-.project-link:hover {
-    background: #0056b3;
+    border: none;
+    cursor: pointer;
+    margin-top: 1rem;
 }
 
 /* Remove gallery styles and replace with: */
@@ -145,31 +132,31 @@ h1 {
 
 .close-modal {
     position: absolute;
-    right: 35px;
+    right: 25px;
     top: 15px;
-    color: #f1f1f1;
-    font-size: 40px;
-    font-weight: bold;
+    color: white;
+    font-size: 35px;
     cursor: pointer;
 }
 
 .modal-nav {
     position: fixed; /* Change to fixed */
-    bottom: 40px; /* Increase distance from bottom */
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+    bottom: 20px; /* Increase distance from bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0,0,0,0.5);
+    padding: 10px;
+    border-radius: 4px;
     color: white;
     z-index: 1001; /* Ensure nav stays above image */
 }
 
 .modal-nav button {
-    background: rgba(255, 255, 255, 0.2);
+    background: #007bff;
     border: none;
     color: white;
-    padding: 10px 20px;
+    padding: 5px 15px;
+    margin: 0 10px;
     cursor: pointer;
     border-radius: 4px;
 }
@@ -181,6 +168,22 @@ h1 {
 #imageCount {
     color: white;
     padding: 10px;
+}
+
+/* Contact section */
+.contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.contact-links a, .contact-links span {
+    padding: 0.5rem 1rem;
+    background: #f5f5f5;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #333;
 }
 
 /* Responsive Styles */
